@@ -1,0 +1,14 @@
+Giải thích:
+FROM ubuntu:20.04
+Đánh dấu bắt đầu build image dựa trên image cơ sở ubuntu 20.04.
+
+EXPOSE 3000
+Khai báo cổng mạng container lắng nghe khi chạy là port 3000.
+
+RUN apt-get update
+Chạy trong quá trình build image. 
+Vì image gốc được khai báo trong phần FROM là ubuntu nên được sử dụng apt-get để cài đặt xpra.
+Bắt đầu bằng việc cập nhật cơ sở dữ liệu apt-get.
+
+RUN apt-get -y install xpra
+Cài đặt xpra bằng apt-get.
